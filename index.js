@@ -169,11 +169,11 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
+ function getReviewByRating(arr, rating /* code here */) {
     /* code here */
+    return arr.filter(x => x.rating >= 4 && x.rating < 5)
   }
 
-  
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
   1. Receive the array that holds all the reviews
@@ -187,10 +187,10 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
+function getLongReviews(arr /* code here */) {
     /* code here */
-  }
-  
+    return arr.filter(x => x.feedback.split(" ").length > 15 ) 
+}
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
@@ -210,11 +210,16 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
+function carMaker(val /* code here */) {
     /* code here */
-    
+   const obj = {
+     val,
+     drive: function(dist) {
+        return val + dist;
+     }
+   }; 
+   return obj;
 }
-
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo(){
